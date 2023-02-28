@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirlineReservationPro150StarterASPCore", "..\..\Users\Dylan\Downloads\AirlineReservationPro150StarterASPCore\AirlineReservationPro150StarterASPCore\AirlineReservationPro150StarterASPCore.csproj", "{47409D0D-ADFF-4DA8-A233-5D1972CD101C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{C9D914D6-6BBB-4217-BC55-73A57A8228AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestFlightRepository", "TestFlightRepository", "{44ED5572-3FC0-4050-ADE9-307308AFE18C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flights", "Flights", "{44B9176D-9F68-4959-9DDB-DA912B2B2677}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\Dylan\Downloads\AirlineReservationPro150StarterASPCore\AirlineReservationPro150StarterASPCore\TestFlightRepository.cs = ..\..\Users\Dylan\Downloads\AirlineReservationPro150StarterASPCore\AirlineReservationPro150StarterASPCore\TestFlightRepository.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44ED5572-3FC0-4050-ADE9-307308AFE18C} = {C9D914D6-6BBB-4217-BC55-73A57A8228AF}
+		{44B9176D-9F68-4959-9DDB-DA912B2B2677} = {44ED5572-3FC0-4050-ADE9-307308AFE18C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {714C870D-3FC5-4A70-9AA1-485D0AC019F3}
+	EndGlobalSection
+EndGlobal
