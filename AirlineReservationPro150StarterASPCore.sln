@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flights", "Flights", "{44B9
 		..\..\Users\Dylan\Downloads\AirlineReservationPro150StarterASPCore\AirlineReservationPro150StarterASPCore\TestFlightRepository.cs = ..\..\Users\Dylan\Downloads\AirlineReservationPro150StarterASPCore\AirlineReservationPro150StarterASPCore\TestFlightRepository.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "ClassLib\ClassLib.csproj", "{F287037E-4A47-43A1-916B-9523A2B8191A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47409D0D-ADFF-4DA8-A233-5D1972CD101C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F287037E-4A47-43A1-916B-9523A2B8191A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F287037E-4A47-43A1-916B-9523A2B8191A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F287037E-4A47-43A1-916B-9523A2B8191A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F287037E-4A47-43A1-916B-9523A2B8191A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
