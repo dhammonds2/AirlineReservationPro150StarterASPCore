@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace ClassLib.Data 
 {
-    public class FlightDalMsSql : IPersistDal<FlightDto>, IFetchDal<FlightDto>
+    public class FlightDatabase : IPersistDal<FlightDto>, IFetchDal<FlightDto>
     {
 
         public IEnumerable<FlightDto> getAll() => Database.query<FlightDto>("SELECT * FROM Flight ORDER BY departureDate");

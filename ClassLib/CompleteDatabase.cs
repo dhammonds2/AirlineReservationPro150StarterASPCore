@@ -7,16 +7,16 @@ using System.Data.SqlClient;
 
 namespace ClassLib
 {
-    internal class DatabaseBig
+    internal class CompleteDatabase
     {
         private readonly string connectionString;
         public SqlConnection conn;
         public SqlCommand cmd;
         public SqlDataReader reader;
 
-        public DatabaseBig()
+        public CompleteDatabase()
         {
-            connectionString = "Data Source=mssql.fhict.local;Initial Catalog=dbi463189_airline;Persist Security Info=True;User ID=dbi463189_airline;Password=m4VEw2tX;";
+            connectionString = "";
         }
 
         public void databaseConnection(string query)

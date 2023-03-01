@@ -8,7 +8,7 @@ using ClassLib.Logic;
 
 namespace ClassLib.Data_Access_Layer
 {
-    internal class BillingDalMsSql : DatabaseBig, IPersistDal<BillingDto>, IFetchDal<BillingDto>
+    internal class BillingDatabase : CompleteDatabase, IPersistDal<BillingDto>, IFetchDal<BillingDto>
     {
         public void delete(int billingId)
         {

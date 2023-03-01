@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace ClassLib.Data
 {
-    public class CustomerDalMsSql : DatabaseBig, IPersistDal<CustomerDto>, IFetchDal<CustomerDto>
+    public class CustomerDetailsDatabase : CompleteDatabase, IPersistDal<CustomerDto>, IFetchDal<CustomerDto>
     {
         public IEnumerable<CustomerDto> getAll() => Database.query<CustomerDto>("SELECT * FROM Customer ORDER BY FirstName");
 
@@ -23,8 +23,6 @@ namespace ClassLib.Data
                     data.lastName,
                     data.email,
                     data.phoneNumber,
-                    data.dateOfBirth,
-                    data.gender,
                     data.password,
                     data.isAdmin
                 }
@@ -105,8 +103,7 @@ namespace ClassLib.Data
                     data.lastName,
                     data.email,
                     data.phoneNumber,
-                    data.dateOfBirth,
-                    data.gender,
+                    data.isAdmin,
                     data.password
                 }
             );

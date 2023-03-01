@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace ClassLib.Data
 {
-    public class TicketDalMsSql : IPersistDal<TicketDto>, IFetchDal<TicketDto>
+    public class TicketDatabase : IPersistDal<TicketDto>, IFetchDal<TicketDto>
     {
         public int saveGetId(TicketDto data)
         {
@@ -17,9 +17,7 @@ namespace ClassLib.Data
                 {
                     data.customerId,
                     data.travelType,
-                    data.classType,
-                    data.numberOfAdults,
-                    data.numberOfChildren
+                    data.classType
                 }
             );
             return id;
@@ -48,9 +46,7 @@ namespace ClassLib.Data
                     data.customerId,
                     data.flightId,
                     data.travelType,
-                    data.classType,
-                    data.numberOfAdults,
-                    data.numberOfChildren
+                    data.classType
                 }
             );
         }
