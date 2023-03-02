@@ -1,4 +1,4 @@
-﻿
+﻿using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -22,6 +22,7 @@ namespace ClassLib.Data
 
          public static IEnumerable<T> query<T>(string sql, object parameters = null)
          {
+            
              return connection.Query<T>(sql, parameters);
          }
 

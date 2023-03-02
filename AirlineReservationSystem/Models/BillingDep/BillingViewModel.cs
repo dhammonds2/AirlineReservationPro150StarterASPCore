@@ -10,7 +10,7 @@ namespace AirlineReservationSystem.Models.Billing
     public class BillingViewModel
     {
         
-        public BillingViewModel(ClassLib.Logic.Bill billing) { }
+        //public BillingViewModel(ClassLib.Logic.Bill billing) { }
 
         public int billingId { get; set; }
         public string arrivalCountry { get; set; }
