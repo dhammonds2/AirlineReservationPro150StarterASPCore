@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Airline.Models.TicketView
+
+<body class="register-body">
+    <div class="register-container">
+        <header>Booking Form</header>
+        <div class="progress-bar2">
+            <div class="step">
+                <p>Travel</p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Class</p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Passengers</p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+        <div class="form-outer">
+            <form method="post" asp-controller="Ticket" asp-action="Create">
+                <div class="page slide-page">
+                    <div class="title">Travel type:</div>
+                    <div class="form-check form-check-inline radio">
+                        <input class="form-check-input" type="radio" name="travelType" asp-for="travelType" value="Single Trip">
+                        <label class="form-check-label" for="inlineRadio1">Single Trip</label>
+                    </div>
+                    <div class="form-check form-check-inline radio">
+                        <input class="form-check-input" type="radio" name="travelType" asp-for="travelType" value="Return Trip">
+                        <label class="form-check-label" for="inlineRadio2">Return Trip</label>
+                    </div>
+                    <span asp-validation-for="travelType" class="text-danger"></span>
+                    <div class="field">
+                        <button class="firstNext next">Next</button>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="title">Class type:</div>
+                    <div class="form-check form-check-inline radio">
+                        <input class="form-check-input" type="radio" name="classType" asp-for="classType" value="Economy">
+                        <label class="form-check-label" for="inlineRadio1">Economy</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="classType" asp-for="classType" value="First Class">
+                        <label class="form-check-label" for="inlineRadio2">First Class</label>
+                    </div>
+                    <span asp-validation-for="classType" class="text-danger"></span>
+                    <div class="field btns">                      
+                        <button class="next-1 next">Next</button>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="title">Number of passengers:</div>
+                    <div class="field">
+                        <div class="label">Adult</div>
+                        <span asp-validation-for="numberOfAdults" class="text-danger"></span>
+                        <select class="form-control" name="numberOfAdults" asp-for="numberOfAdults">
+                            @{
+                                int[] adults = { 1, 2, 3, 4 };
+                                foreach (var passenger in adults)
+                                {
+                                    <option value="@passenger">@passenger</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="field">
+                        <div class="label">Children 2—11</div>
+                        <span asp-validation-for="numberOfChildren" class="text-danger"></span>
+                        <select class="form-control" name="numberOfChildren" asp-for="numberOfChildren">
+                            @{
+                                int[] children = { 0, 1, 2, 3 };
+                                foreach (var passenger in children)
+                                {
+                                    <option value="@passenger">@passenger</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <a class="btn btn-primary" style="margin-right: 3px;" asp-controller="Ticket" asp-action="Create">Back to start</a>
+                    <div class="field btns">
+                        <button class="submit" style="margin-left: 3px;">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="~/js/site.js"></script>
+</body>

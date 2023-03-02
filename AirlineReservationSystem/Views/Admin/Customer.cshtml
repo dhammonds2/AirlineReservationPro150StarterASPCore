@@ -1,0 +1,36 @@
+﻿@model Airline.Models.CustomerDetailView
+@{
+    ViewData["Title"] = "Customer Management";
+}
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Year of Birth</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Phone number</th>
+                <th scope="col">Emailadress</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.Customers)
+            {
+                <tr>
+                    <td>@customer.firstName @customer.lastName</td>
+                    <td>@customer.dateOfBirth.ToString("dd MMMM yyyy")</td>
+                    <td>@customer.gender</td>
+                    <td>@customer.phoneNumber</td>
+                    <td>@customer.email</td>
+                    <td>
+                        <form asp-controller="Account" asp-action="Delete" asp-route-id="@customer.customerId" method="post">
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete customer @customer.firstName ?')">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

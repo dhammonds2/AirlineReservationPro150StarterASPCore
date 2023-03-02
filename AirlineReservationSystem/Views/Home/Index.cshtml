@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body class="register-body">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">Welcome @Context.Session.GetString("firstName") to flying Dutchman</h1>
+            <p>First step to explore the world!</p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <a class="btn btn-primary" asp-controller="Ticket" asp-action="Create">Book a flight now!</a>
+        </div>
+    </div>
+</body>
+
+

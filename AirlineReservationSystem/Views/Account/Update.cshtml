@@ -1,0 +1,75 @@
+﻿@model Airline.Models.CustomerView
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container">
+    <h1>Update account</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Update" asp-controller="Account">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="firstName" class="control-label"></label>
+                    <input asp-for="firstName" class="form-control" />
+                    <span asp-validation-for="firstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="lastName" class="control-label"></label>
+                    <input asp-for="lastName" class="form-control" />
+                    <span asp-validation-for="lastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="email" class="control-label"></label>
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="phoneNumber" class="control-label"></label>
+                    <input asp-for="phoneNumber" class="form-control" />
+                    <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dateOfBirth" class="control-label"></label>
+                    <input asp-for="dateOfBirth" class="form-control" />
+                    <span asp-validation-for="dateOfBirth" class="text-danger"></span>
+                </div>
+                <div class="field">
+                    <div class="label">Gender</div>
+                    <span asp-validation-for="gender" class="text-danger"></span>
+                    <select class="form-control" name="Gender" asp-for="gender">
+                        @{
+                            string[] genders = { "Male", "Female", "Other" };
+                            foreach (var gender in genders)
+                            {
+                                <option value="@gender">@gender</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="password" class="control-label"></label>
+                    <input asp-for="password" class="form-control" />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="confirmPassword" class="control-label"></label>
+                    <input asp-for="confirmPassword" class="form-control" />
+                    <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Dashboard" asp-controller="Home">Cancel profile edit</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

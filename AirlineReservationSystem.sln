@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirlineReservationSystem", "AirlineReservationSystem\AirlineReservationSystem.csproj", "{B055F4B8-C046-4000-BA75-7280130A623E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "ClassLib\ClassLib.csproj", "{9FAE167E-E4C5-4163-A029-F573A7C14192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B055F4B8-C046-4000-BA75-7280130A623E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B055F4B8-C046-4000-BA75-7280130A623E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B055F4B8-C046-4000-BA75-7280130A623E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B055F4B8-C046-4000-BA75-7280130A623E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33047CEE-6A3B-4923-9D40-86EF4E865613}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,121 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Airline.Models.CustomerView
+
+
+    <body class="register-body">
+        <div class="register-container">
+            <header>Signup Form</header>
+            <div class="progress-bar1">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>  
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Submit</p>
+                    <div class="bullet">
+                        <span>4</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+            </div>
+            <div class="form-outer">
+                <form method="post" asp-controller="Account" asp-action="Register">
+                    <div class="page slide-page">
+                        <div class="title">Basic Info:</div>
+                        <div class="field">
+                            <div class="label">First Name</div>
+                            <input class="form-control" type="text" name="firstName" asp-for="firstName" placeholder="Jan">
+                            <span asp-validation-for="firstName" class="text-danger"></span>
+                        </div>
+                        <div class="field">
+                            <div class="label">Last Name</div>
+                            <input class="form-control" type="text" name="lastName" asp-for="lastName" placeholder="Modaal">
+                            <span asp-validation-for="lastName" class="text-danger"></span>
+                        </div>
+                        <div class="field">
+                            <button class="firstNext next">Next</button>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="title">Contact Info:</div>
+                        <div class="field">
+                            <div class="label">Email Adress</div>
+                            <input class="form-control" type="text" name="Email" asp-for="email" placeholder="Jan@gmail.nl">
+                            <span asp-validation-for="email" class="text-danger"></span>
+                        </div>
+                        <div class="field">
+                            <div class="label">Phone number</div>
+                            <input class="form-control" type="text" name="PhoneNumber" asp-for="phoneNumber" placeholder="0659437584">
+                            <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-1 prev">Previous</button>
+                            <button class="next-1 next">Next</button>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="title">Date of Birth:</div>
+                        <div class="field">
+                            <div class="label">Date</div>
+                            <input class="form-control" type="date" name="DateOfBirth" asp-for="dateOfBirth" >
+                            <span asp-validation-for="dateOfBirth" class="text-danger"></span>
+                        </div>
+                        <div class="field">
+                            <div class="label">Gender</div>
+                            <span asp-validation-for="gender" class="text-danger"></span>
+                            <select class="form-control" name="Gender" asp-for="gender">
+                                @{
+                                    string[] genders = { "Male", "Female", "Other" };
+                                    foreach (var gender in genders)
+                                    {
+                                        <option value="@gender">@gender</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-2 prev">Previous</button>
+                            <button class="next-2 next">Next</button>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="title">Login Details:</div>
+                        <div class="field">
+                            <div class="label">Password</div>
+                            <input class="form-control" type="password" name="Password" asp-for="password" placeholder="Password">
+                            <span asp-validation-for="password" class="text-danger"></span>
+                        </div>
+                        <div class="field">
+                            <div class="label">Confirm Password</div>
+                            <input class="form-control" type="password" name="confirmPassword" asp-for="confirmPassword" placeholder="Confirm Password">
+                            <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                        </div>
+                        <div class="field">
+                            <button class="prev-3 prev" style="margin-right: 3px;">Previous</button>
+                            <button class="submit" style="margin-left: 3px;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="~/js/site.js"></script>
+    </body>

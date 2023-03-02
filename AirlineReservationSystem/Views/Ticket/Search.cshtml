@@ -1,0 +1,43 @@
+﻿@model Airline.Models.FlightDetailView
+@{
+    ViewData["Title"] = "Where are you going?";
+}
+
+<div class="container">
+    <h3>@ViewData["Title"]</h3>
+    <form method="post" asp-controller="Ticket" asp-action="Search">
+        <div class="input-group">
+            <input class="form-control" asp-for="searchString" placeholder="United States" />
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">
+                    Search
+                </button>
+            </div>
+            <a asp-action="Search">Get all destinations</a>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Departure</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model.Flights)
+            {
+                <tr>
+                    <td>@flight.departureCountry</td>
+                    <td>@flight.arrivalCountry</td>
+                    <td>@flight.departureDate</td>
+                    <td>€@flight.price,-</td>
+                    <td>
+                        @Html.ActionLink("Book Flight", "Book", null, new { id = flight.flightId }, new { @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

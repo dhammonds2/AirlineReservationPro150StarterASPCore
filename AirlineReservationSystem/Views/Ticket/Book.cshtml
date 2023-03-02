@@ -1,0 +1,116 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="invoice-box">
+    <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td class="title">Flying Dutchman</td>
+                        <td>
+                            Created: @DateTime.Now.ToString("dddd, dd MMMM yyyy") <br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr class="information">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td>
+                            Dutchman Corp.<br>
+                            Scheepse Geest 7<br>
+                            4966 PC, Rotterdam
+                        </td>
+
+                        <td>
+                            @ViewBag.Customer.firstName @ViewBag.Customer.lastName<br>
+                            @ViewBag.Customer.phoneNumber<br>
+                            @ViewBag.Customer.email<br>
+                            @ViewBag.Customer.dateOfBirth.ToString("dddd, dd MMMM yyyy");
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="heading">
+            <td>
+                Payment Method
+            </td>
+            <td>
+                Status
+            </td>
+        </tr>
+
+        <tr class="details">
+            <td>
+                Ideal
+            </td>
+            <td>
+                Complete
+            </td>
+        </tr>
+
+        <tr class="heading">
+            <td>
+                Flight Price Details to @ViewBag.Flight.arrivalCountry with @ViewBag.Ticket.classType
+            </td>
+            <td>
+            </td>
+        </tr>
+        @for (int i = 0; i < ViewBag.Ticket.numberOfAdults; i++)
+        {
+            <tr class="item">
+                <td>
+                    1 adult ticket
+                </td>
+                <td>
+                    €@ViewBag.AdultFarePrice
+                </td>
+            </tr>
+        }
+        @for (int i = 0; i < ViewBag.Ticket.numberOfChildren; i++)
+        {
+            <tr class="item">
+                <td>
+                    1 Child ticket
+                </td>
+                <td>
+                    €@ViewBag.ChildFarePrice
+                </td>
+            </tr>
+        }
+        <tr class="total">
+            <td></td>
+
+            <td>
+                Total: €@ViewBag.TotalPrice
+            </td>
+        </tr>
+    </table>
+    Please Note:
+    <ul>
+        <li>
+            All fares are quoted in EUR
+        </li>
+        <li>
+            Some airlines may charge Baggage Fees.
+        </li>
+    </ul>
+    <dl>
+        <dr>Privacy Policy</dr>
+        <dd>We're committed to protecting your privacy. See our Privacy Policy for details.</dd>
+        <dr>Contact Us</dr>
+        <dd>
+            if you have any questions please email us at or write to us at:, Scheepse Geest 7, Rotterdam, 4966 PC
+        </dd>
+        <dd>
+            © 2021-@DateTime.Now.ToString("yyyy") All right reserved.
+        </dd>
+    </dl>
+</div>

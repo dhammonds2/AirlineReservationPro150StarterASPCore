@@ -1,0 +1,52 @@
+﻿@model Airline.Models.FlightDetailView
+@{
+    ViewData["Title"] = "Flight Management";
+}
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Aircraft</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Departure</th>
+                <th scope="col">Arrival</th>
+                <th scope="col">Status</th>
+                <th scope="col">Price</th>
+                <th scope="col">@Html.ActionLink("+", "Create", "Admin", null, new { @class = "btn btn-primary btn-large" })</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model.Flights)
+            {
+                <tr>
+                    <td>@flight.aircraftCode</td>
+                    <td>@flight.aircraftType</td>
+                    <td>@flight.departureCountry</td>
+                    <td>@flight.arrivalCountry</td>
+                    <td>@flight.departureDate</td>
+                    <td>@flight.arrivalDate</td>
+                    <td>
+                        @if (flight.flightStatus == false)
+                        {<text>Inactive</text>}
+                    else
+                    {<text>Active</text>}
+                    </td>
+                    <td>€@flight.price,-</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", null, new { id = flight.flightId }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Detail", "Details", null, new { id = flight.flightId }, new { @class = "btn btn-primary" })
+                        <form asp-action="Delete" asp-route-id="@flight.flightId" method="post">
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete flight @flight.aircraftCode ?')">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
