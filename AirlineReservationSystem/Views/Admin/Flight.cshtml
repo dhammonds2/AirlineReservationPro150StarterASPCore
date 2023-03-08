@@ -4,7 +4,7 @@
 }
 
 <div class="container">
-    <h2>@ViewData["Title"]</h2>    
+    <h2>@ViewData["Title"]</h2>
     <table class="table">
         <thead>
             <tr>
@@ -31,11 +31,15 @@
                     <td>@flight.arrivalDate</td>
                     <td>
                         @if (flight.flightStatus == false)
-                        {<text>Inactive</text>}
-                    else
-                    {<text>Active</text>}
+                        {
+                            <text>Inactive</text>
+                        }
+                        else
+                        {
+                            <text>Active</text>
+                        }
                     </td>
-                    <td>€@flight.price,-</td>
+                    <td>$@flight.price</td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", null, new { id = flight.flightId }, new { @class = "btn btn-primary" })
                         @Html.ActionLink("Detail", "Details", null, new { id = flight.flightId }, new { @class = "btn btn-primary" })

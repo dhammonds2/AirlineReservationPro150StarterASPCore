@@ -73,9 +73,13 @@
                         <td>@billing.paymentDate.ToString("dddd, dd MMMM yyyy HH:mm")</td>
                         <td>
                             @if (billing.paymentStatus == false)
-                            {<text>Incomplete</text>}
-                        else
-                        {<text>Complete</text>}
+                            {
+                                <text>Incomplete</text>
+                            }
+                            else
+                            {
+                                <text>Complete</text>
+                            }
                         </td>
                         <td>
                             <form asp-action="Delete" asp-controller="Ticket" asp-route-id="@billing.billingId" method="post">

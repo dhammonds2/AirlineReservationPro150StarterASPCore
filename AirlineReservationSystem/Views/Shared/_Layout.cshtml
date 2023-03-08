@@ -64,7 +64,7 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary">Sign in</button>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" asp-controller="Account" asp-action="register">New around here? Sign up</a>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="register">First time flying with us? Sign up</a>
                                     </div>
                                 </form>
                             </div>
@@ -75,18 +75,32 @@
                             <li class="nav-item nav-floatright">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Flight">Flight Management</a>
                             </li>
-                            <li class="nav-item nav-floatright">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Customer">Customer Management</a>
-                            </li>
+
                         }
+                        <li class="nav-item nav-floatright">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Create">Create Flights</a>
+
+                        </li>
+                        <li class="nav-item nav-floatright">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Customer">Customer Management</a>
+                        </li>
+
+                        <li class="nav-item nav-floatright">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Flight">Flight</a>
+                        </li>
+                        <li class="nav-item nav-floatright">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ticket" asp-action="Search">Book</a>
+                        </li>
+
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div>
-        <main role="main"
-              @RenderBody()
+        <main role="main">
+            @RenderBody()
         </main>
     </div>
 
