@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirlineReservationSystem", "AirlineReservationSystem\AirlineReservationSystem.csproj", "{B055F4B8-C046-4000-BA75-7280130A623E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "ClassLib\ClassLib.csproj", "{9FAE167E-E4C5-4163-A029-F573A7C14192}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLib", "ClassLib\ClassLib.csproj", "{9FAE167E-E4C5-4163-A029-F573A7C14192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.UnitTest", "Airline.UnitTest\Airline.UnitTest.csproj", "{F6DFEF5C-51D1-4642-9037-5D964945E97E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FAE167E-E4C5-4163-A029-F573A7C14192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DFEF5C-51D1-4642-9037-5D964945E97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DFEF5C-51D1-4642-9037-5D964945E97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DFEF5C-51D1-4642-9037-5D964945E97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DFEF5C-51D1-4642-9037-5D964945E97E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
